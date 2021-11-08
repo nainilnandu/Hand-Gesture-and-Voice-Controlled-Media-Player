@@ -89,15 +89,6 @@ function displayPlayIcon() {
 video.addEventListener('ended', displayPlayIcon);
 
 
-//
-// function perTime(time) {
-//     console.log(time);
-//     const minutes = Math.floor(time / 60);
-//     let seconds = Math.floor(time % 60);
-//     seconds = seconds > 9 ? seconds : `0${seconds}`;
-//     return `${minutes}: ${seconds}`;
-// }
-
 function showTime(time) {
     console.log(time);
     const minutes = Math.floor(time / 60);
@@ -243,6 +234,6 @@ let fullscreen = new String("full screen");
 
 function toggleFullscreen(cmd) {
     console.log(cmd);
-    cmd == new String("full screen") ? openFullscreen(player) : closeFullscreen();
+    cmd == new String("full screen") ? fullscreenfn() : closeFullscreen();
     fullscreen = !fullscreen;
 }

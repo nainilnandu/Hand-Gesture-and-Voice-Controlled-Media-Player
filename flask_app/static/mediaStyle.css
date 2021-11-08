@@ -267,3 +267,17 @@ ul li.playing{
   justify-content: center;
   padding: 30px;
 }
+.handgesture__box {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+.handgesture__button {
+  background-color: #0278a7;
+  padding: 15px;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 18px 1px #00000047;
+}

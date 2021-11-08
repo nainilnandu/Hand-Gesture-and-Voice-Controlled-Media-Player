@@ -81,6 +81,7 @@ def main():
 
 
 
+
 import os
 import pyautogui as p
 #import HandTrackingModule as htm
@@ -134,25 +135,28 @@ while True:
         print(totalFingers)
         
         if totalFingers == 0:
-            cv2.putText(img, " ", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255),2)
+            cv2.putText(img, "", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255),2)
         
         elif totalFingers == 1:
-            p.press("space")
-            cv2.putText(img, "Play/Pause", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
+            p.press("p")
+            cv2.putText(img, "Play", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
         
-        elif totalFingers == 2:
-            #p.keyDown("fn")
-            p.press("up")
-            cv2.putText(img, "Volume UP", (5, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
+        elif totalFingers == 2:  
+            p.press("l")
+            cv2.putText(img, "Pause", (5, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
         
         elif totalFingers == 3:
-            p.press("down")
+            p.press("volumedown")
             cv2.putText(img, "Volume Down", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
         
         elif totalFingers == 4:
-            p.press("right")
-            cv2.putText(img, "Forward", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
+            p.press("volumeup")
+            cv2.putText(img, "Volume Up", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
         
+        elif totalFingers == 5:
+            p.press("m")
+            cv2.putText(img, "Mute", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 2)
+            time.sleep(3)
         else:
             pass
 

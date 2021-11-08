@@ -60,10 +60,9 @@
         </div>
     </div>
 
-    <h2 class="font-weight-bold pb-3 text-light">Virtual Paint</h2>
-    <form action="hand_gesture" method="get">
-      <button class="btn btn-warning" type="submit">Open Virtual Paint</button>
-  </form>
+    <form action="hand_gesture" class="handgesture__box" method="get">
+        <button class="handgesture__button" type="submit"><i class="fas fa-video"></i></button>
+    </form>
     <script src="{{ url_for('static', filename='videoScript.js') }}"></script>
 </body>
 

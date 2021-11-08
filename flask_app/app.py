@@ -12,23 +12,16 @@ from flask.helpers import url_for
 
 app = Flask(__name__)
 
-from werkzeug.debug import DebuggedApplication
-app.wsgi_app = DebuggedApplication(app.wsgi_app, True)
 
-
-
-
-@app.route("/")
-@app.route("/home", methods=["GET", "POST"])
+# @app.route("/")
+@app.route("/index.html", methods=["GET", "POST"])
 def home():
     return render_template("index.html")
 
 @app.route("/mediaList.html", methods=["GET", "POST"])
-def mediaList():
+def mediaList(): 
     return render_template("mediaList.html")
-    
-   
-    
+
 
 @app.route("/video.html", methods=["GET", "POST"])
 def video():
@@ -51,7 +44,7 @@ def hand_gesture():
         os.system("python Hand_Gesture.py")
         
     return redirect(url_for('home'))
-    
+     
 
 if __name__ == "__main__":
     app.debug = False
