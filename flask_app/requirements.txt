@@ -1,0 +1,4 @@
+flask
+mediapipe
+pyautogui
+opencv-python
