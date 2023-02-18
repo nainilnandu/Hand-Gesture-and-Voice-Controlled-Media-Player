@@ -32,15 +32,11 @@ def video():
 def hand_gesture():
     if request.method == "GET":
         path_list = (os.path.dirname(__file__)).split("\\")
-        print(path_list)
         if path_list[-1] == "flask_app":
             path_list.pop(-1)
             print(path_list)    
         final_path = "\\".join(path_list)
-        print(final_path)
         os.chdir(final_path+"\\Hand_gesture")
-        print(os.getcwd())
-        print("################ Directory Changed ################")
         os.system("python Hand_Gesture.py")
         
     return redirect(url_for('home'))
